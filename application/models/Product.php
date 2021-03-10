@@ -31,7 +31,7 @@ class Product extends CI_Model{
         // Return fetched data
         return !empty($result)?$result:false;
     }
-    
+
     /*
      * Fetch order data from the database
      * @param id returns a single record of the specified ID

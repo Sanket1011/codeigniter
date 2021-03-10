@@ -16,7 +16,7 @@
                 <?php if($this->cart->total_items() > 0){ foreach($cartItems as $item){ ?>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <?php $imageURL = !empty($item["image"])?base_url('uploads/product_images/'.$item["image"]):base_url('assets/images/pro-demo-img.jpeg'); ?>
+                        <?php $imageURL = !empty($item["image"])?base_url('uploads/product_images/'.$item["image"]):base_url('assets/images/pro-demo-img.jpg'); ?>
                         <img src="<?php echo $imageURL; ?>" width="75"/>
                         <h6 class="my-0"><?php echo $item["name"]; ?></h6>
                         <small class="text-muted"><?php echo '$'.$item["price"]; ?>(<?php echo $item["qty"]; ?>)</small>
@@ -29,11 +29,11 @@
                 </li>
                 <?php } ?>
                 <li class="list-group-item d-flex justify-content-between">
-                    <span>Total (USD)</span>
+                    <span>Total RS</span>
                     <strong><?php echo '$'.$this->cart->total(); ?></strong>
                 </li>
             </ul>
-            <a href="<?php echo base_url('products/'); ?>" class="btn btn-block btn-info">Add Items</a>
+            <a href="<?php echo base_url('products/index'); ?>" class="btn btn-block btn-info">Add Items</a>
         </div>
         <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Contact Details</h4>

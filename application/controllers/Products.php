@@ -11,20 +11,32 @@ class Products extends CI_Controller{
         
         // Load product model
         $this->load->model('product');
+        $this->load->model('user');
+        $this->isUserLoggedIn = $this->session->userdata('isUserLoggedIn'); 
+
     }
     
     function index(){
+       
         $data = array();
-        
+        if($this->isUserLoggedIn){
         // Fetch products from the database
         $data['products'] = $this->product->getRows();
-        
+        $this->load->view('products/navbar');
+        $con = array( 
+            'id' => $this->session->userdata('userId') 
+        ); 
+        $data['user'] = $this->user->getRows($con);
         // Load the product list view
         $this->load->view('products/index', $data);
+        }else{
+            redirect('user/login');
+        }
+
     }
     
     function addToCart($proID){
-        
+        if($this->isUserLoggedIn){
         // Fetch specific product by ID
         $product = $this->product->getRows($proID);
         
@@ -40,6 +52,8 @@ class Products extends CI_Controller{
         
         // Redirect to the cart page
         redirect('cart/');
-    }
-    
+        }else{
+            redirect('user/login');
+        }
 }
+    }

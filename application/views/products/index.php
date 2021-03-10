@@ -22,7 +22,7 @@
     <?php if(!empty($products)){ foreach($products as $row){ ?>
         <div class="card col-lg-3">
             <img class="card-img-top" src="<?php echo base_url('uploads/product_images/'.$row['image']); ?>" alt="">
-            <div class="card-body">
+            <div class="card-body" style="color:'red'">
                 <h5 class="card-title"><?php echo $row["name"]; ?></h5>
                 <h6 class="card-subtitle mb-2 text-muted">Price: <?php echo ''.$row["price"].' Rs'; ?></h6>
                 <p class="card-text"><?php echo $row["description"]; ?></p>

@@ -68,11 +68,11 @@ function updateCartItem(obj, rowid){
 <div class col mb-2> 
     <div class = "row">
         <div class = "col-sm-12 col-md-6">
-            <a href = "<?php echo base_url('products/'); ?>" class= "btn btn-block btn-light">Continue Shopping </a> 
+            <a href = "<?php echo base_url('products/index'); ?>" class= "btn btn-block btn-light">Continue Shopping </a> 
             </div>
              <div class= "col-sm-12 col-md-6 text-right"> 
                  <?php if($this->cart->total_items() > 0){ ?>
-                    <a class=" btn btn-lg btn-block btn-primary">Checkout </a>
+                    <a href="<?php echo base_url('checkout/'); ?> "class=" btn btn-lg btn-block btn-primary">Checkout </a>
                     <?php } ?>
 
              </div>
