@@ -15,13 +15,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+    
     
 <!-- Stylesheet file -->
 <link href="<?php echo base_url('assets/css/style.css'); ?>" rel='stylesheet' type='text/css' />
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><?php echo'Hello! '.$user['first_name'].' '.$user['last_name']; ?></a>
+  <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -38,13 +42,13 @@
         <a class="nav-link" href="<?php echo base_url('products/contact');?>">Contact Us</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?php echo base_url('users/account'); ?>">Edit Profile</a>
-          <!-- this is logout -->
-          <a class="dropdown-item" href="<?php echo base_url('users/logout'); ?>">Logout</a>
+          <a class="dropdown-item" href="<?php echo base_url('users/registration'); ?>">Sign Up</a>
+
+          <a class="dropdown-item" href="<?php echo base_url('users/login'); ?>">Login</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>

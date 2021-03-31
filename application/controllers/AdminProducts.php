@@ -11,12 +11,19 @@ class AdminProducts extends CI_Controller {
       parent::__construct(); 
       $this->load->model('ProductsModel');         
    }
+   
    public function index()
    {
        $products=new ProductsModel;
        $data['data']=$products->get_products();
        $this->load->view('includes/header');       
        $this->load->view('products/list',$data);
+       $this->load->view('includes/footer');
+   }
+   public function reports()
+   {
+       $this->load->view('includes/header');       
+       $this->load->view('products/admin');
        $this->load->view('includes/footer');
    }
    public function create()

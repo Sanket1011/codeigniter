@@ -22,15 +22,19 @@ class Products extends CI_Controller{
         if($this->isUserLoggedIn){
         // Fetch products from the database
         $data['products'] = $this->product->getRows();
-        $this->load->view('products/navbar');
         $con = array( 
             'id' => $this->session->userdata('userId') 
         ); 
         $data['user'] = $this->user->getRows($con);
+        $this->load->view('includes/header',$data);
+        $this->load->view('products/navbar',$data);
         // Load the product list view
         $this->load->view('products/index', $data);
         }else{
-            redirect('user/login');
+            $data['products'] = $this->product->getRows();
+            // $this->load->view('includes/header',$data);
+            $this->load->view('home/homenav');
+            $this->load->view('products/index',$data);
         }
 
     }
@@ -53,7 +57,41 @@ class Products extends CI_Controller{
         // Redirect to the cart page
         redirect('cart/');
         }else{
-            redirect('user/login');
+            redirect('users/login');
         }
+}
+function about(){
+    if($this->isUserLoggedIn){
+        $con = array( 
+            'id' => $this->session->userdata('userId') 
+        ); 
+        $data['user'] = $this->user->getRows($con);
+
+    $this->load->view('products/navbar', $data);
+    $this->load->view('home/about');
+     
+    }else{
+        $this->load->view('elements/header');
+        $this->load->view('home/homenav');
+        $this->load->view('home/about');
+        $this->load->view('elements/footer'); 
+    }
+}
+function contact(){
+    if($this->isUserLoggedIn){
+        $con = array( 
+            'id' => $this->session->userdata('userId') 
+        ); 
+        $data['user'] = $this->user->getRows($con);
+
+    $this->load->view('products/navbar', $data);
+    $this->load->view('home/contact');
+     
+    }else{
+        $this->load->view('elements/header');
+        $this->load->view('home/homenav');
+        $this->load->view('home/contact');
+        $this->load->view('elements/footer'); 
+    }
 }
     }

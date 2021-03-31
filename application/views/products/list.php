@@ -1,13 +1,6 @@
-<script
-
-src="https://ajax.googleapis.com/ajax/libs/jquery /3.2.1/jquery.min.js"></script>
-
-<script
-
-src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="row">
     <div class="col-lg-12">           
-        <h2>Products           
+        <h2>Inventory           
             <div class="pull-right">
                <a class="btn btn-primary" href="<?php echo base_url('AdminProducts/create') ?>"> Add New Product</a>
             </div>
@@ -17,6 +10,9 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 <form action="<?php echo site_url('AdminProducts/search_keyword');?>" method = "post">
 <input type="text" name = "keyword" />
 <input type="submit" value = "Search" />
+<a class="btn btn-primary" href="<?php echo base_url('AdminProducts/reports') ?>"> Reports</a>
+
+ 
 </form>
 <div class="table-responsive">
 <table class="table table-bordered">
@@ -48,4 +44,5 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
       <?php } ?>
   </tbody>
 </table>
+
 </div>

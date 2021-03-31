@@ -1,0 +1,15 @@
+ body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+  
+  
+  .container {
+    padding: 60px;
+    align-items: center;
+    background: #687471;
+    color: black;
+    font-size: 30px;
+  } 
+  
+ 

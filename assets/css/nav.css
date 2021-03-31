@@ -1,0 +1,17 @@
+.navbar  {
+    letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     background-color:#24252A;
+     margin: 0
+     
+}
+li,a,ul{
+    font-size:16px;
+    color:#0bda2d;
+
+}
+

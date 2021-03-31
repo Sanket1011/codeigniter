@@ -11,6 +11,7 @@ class Cart extends CI_Controller{
         
         // Load product model
         $this->load->model('product');
+        
     }
     
     function index(){

@@ -108,5 +108,42 @@ class Product extends CI_Model{
         // Return the status
         return $insert?true:false;
     }
+    function get_customerinfo() 
+    { 
+        $query = $this->db->get($this->custTable);
+
+        if ($query->num_rows() > 0) 
+        { 
+            return $query->result();
+        
+        }
+        
+        return NULL;
+    }
+        function get_salesinfo()
+         {
+        
+        $query = $this->db->get($this->ordItemsTable);
+        
+        if ($query->num_rows() > 0)
+         {
+              return $query->result();
+        
+        }
+        
+        return NULL;
+    }
+        function get_productsinfo() 
+        {
+             $query = $this->db->get($this->proTable);
+        
+        if ($query->num_rows() > 0) 
+        { 
+            return $query->result();
+        
+        }
+        
+        return NULL;
+    }
     
 }
